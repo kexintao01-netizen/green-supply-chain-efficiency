@@ -1,74 +1,144 @@
-# green-supply-chain-efficiency
-Data analysis project evaluating green supply chain efficiency and industry heterogeneity using Python, DEA models, and statistical methods.
-# Green Supply Chain Efficiency Analysis
+# DEA Green Supply Chain Efficiency Analysis
 
-## Overview
+## Project Overview
 
-This project investigates the cost-efficiency of green supply chains in China's manufacturing and food industries. The study applies Data Envelopment Analysis (DEA) and statistical techniques to evaluate operational and environmental performance across listed companies.
+This project evaluates the green supply chain efficiency of Chinese listed companies in the manufacturing and food industries using the Data Envelopment Analysis (DEA-CCR) model.
 
-The project was developed as part of my postgraduate research in Digital Engineering Management at University College London (UCL).
+The study compares efficiency performance across industries and over time (2021–2023), aiming to identify industry heterogeneity in green supply chain cost-effectiveness. The analysis combines financial, environmental, and ESG-related indicators to evaluate enterprise efficiency under a multi-input, multi-output framework.
+
+---
 
 ## Objectives
 
-* Evaluate green supply chain efficiency across industries
-* Compare efficiency performance between manufacturing and food sectors
-* Identify industry heterogeneity and potential drivers of efficiency differences
-* Generate insights into sustainable operations and business performance
+* Compare the green supply chain efficiency of manufacturing and food industries.
+* Evaluate enterprise efficiency using the DEA-CCR model.
+* Examine industry heterogeneity from 2021 to 2023.
+* Conduct statistical tests to determine whether efficiency differences are significant.
+* Visualize efficiency distributions and industry trends.
+
+---
+
+## Dataset
+
+The dataset is constructed using financial and environmental information collected from Chinese listed companies.
+
+### Input Variables
+
+* Operating Cost
+* Total Assets
+* Total Carbon Emissions
+
+### Output Variables
+
+* Net Profit
+* Environmental (E) Score
+* ISO 14001 Certification
+
+Data preprocessing includes:
+
+* Missing value removal
+* Filtering invalid observations
+* Min-Max normalization
+* Industry classification
+
+---
 
 ## Methodology
 
-### Data Collection
+The project follows the workflow below:
 
-Data were collected from publicly available corporate financial and sustainability disclosures.
+```
+Raw Data
+    ↓
+Data Cleaning & Preprocessing
+    ↓
+DEA Dataset Construction
+    ↓
+DEA-CCR Efficiency Analysis
+    ↓
+Industry Comparison
+    ↓
+Welch's t-test
+    ↓
+Visualization & Statistical Analysis
+```
 
-### Data Processing
+The DEA model is implemented using linear programming with the PuLP library.
 
-* Data cleaning and validation
-* Variable standardisation
-* Industry classification
-* Descriptive statistical analysis
+---
 
-### Efficiency Evaluation
+## Repository Structure
 
-The project applies:
+```
+DEA_Green_Supply_Chain_Efficiency/
 
-* Data Envelopment Analysis (DEA)
-* Trend analysis
-* Industry comparison
-* Statistical significance testing
+│── data/
+│   ├── raw_data.xlsx
+│   ├── company_year_full_data.xlsx
+│   ├── dea_analysis_dataset.xlsx
+│   └── dea_results_by_industry.xlsx
+│
+│── scripts/
+│   ├── 01_data_preprocessing.py
+│   ├── 02_dea_analysis.py
+│   └── 03_visualization_and_statistics.py
+│
+│── figures/
+│   ├── efficiency_distribution.png
+│   ├── efficiency_distribution_by_year.png
+│   ├── efficiency_trend.png
+│   ├── efficiency_heatmap.png
+│   └──Representative enterprise comparison
+│
+├── README.md
+└── requirements.txt
+```
 
-## Tools and Technologies
+---
+
+## Key Results
+
+* Manufacturing firms achieved higher average DEA efficiency than food industry firms.
+* Welch's t-test indicated a statistically significant difference between the two industries (p = 0.0464).
+* Manufacturing efficiency increased between 2021 and 2022 before declining in 2023.
+* The food industry exhibited a relatively stable but slightly downward efficiency trend during the study period.
+* Firms with stronger environmental performance generally demonstrated higher DEA efficiency.
+
+---
+
+## Visualizations
+
+The project includes:
+
+* Distribution of DEA efficiency scores by industry
+* Industry comparison using boxplots
+* Annual efficiency trend analysis
+* Heatmap of average DEA efficiency
+* Representative enterprise comparison
+
+---
+
+## Technologies
 
 * Python
 * Pandas
 * NumPy
-* Excel
-* DEA Models
-* Statistical Analysis
+* Scikit-learn
+* PuLP
+* SciPy
+* Matplotlib
+* Seaborn
 
-## Key Findings
+---
 
-The analysis identified measurable differences in green supply chain efficiency between manufacturing and food companies, highlighting the impact of industry characteristics, operational structures, and sustainability practices.
+## Future Improvements
 
-## Repository Structure
+Potential future work includes:
 
-├── data/
+* Applying the BCC DEA model to evaluate pure technical efficiency.
+* Calculating the Malmquist Productivity Index for dynamic efficiency analysis.
+* Incorporating additional ESG indicators and carbon intensity metrics.
+* Expanding the analysis to more manufacturing subsectors.
 
-├── notebooks/
-
-├── analysis/
-
-├── visualisations/
-
-├── report/
-
-└── README.md
-
-## Author
-
-Kexin Tao
-
-MSc Digital Engineering Management
-
-University College London (UCL)
+---
 
