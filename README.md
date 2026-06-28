@@ -88,11 +88,14 @@ DEA_Green_Supply_Chain_Efficiency/
 │   ├── efficiency_distribution_by_year.png
 │   ├── efficiency_trend.png
 │   ├── efficiency_heatmap.png
-│   └──Representative enterprise comparison
+│   └── Representative enterprise comparison.png
 │
 ├── README.md
 └── requirements.txt
 ```
+<img width="2598" height="1397" alt="03_efficiency_trend" src="https://github.com/user-attachments/assets/2291c3f8-ac16-454f-9bd3-990c90604b93" />
+<img width="3498" height="1697" alt="02_efficiency_distribution_by_year" src="https://github.com/user-attachments/assets/16c0cb23-ceaf-4f6f-8292-74c85d51e2a4" />
+<img width="2898" height="1695" alt="01_efficiency_distribution" src="https://github.com/user-attachments/assets/e47361b0-ca2d-42f8-85a6-b05ef9d2a121" />
 
 ---
 
